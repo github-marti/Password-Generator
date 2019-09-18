@@ -64,34 +64,19 @@ let charArray = [];
 let newPassword = [];
 
 
-// create prompts for getting user choices
+// create prompt to ask user for password length and then assign it to a variable
 
-let passwordLength = prompt("How long do you want your password to be? Choose a number between 8 and 128.");
+let passwordLength = prompt("How many characters do you want your password to be? Choose a number between 8 and 128.");
 
 
-// method to confirm using if statements (haven't made it work yet)
+// return repeat prompt if password is not between 8 and 128 characters lomg
 
-// if (confirm("Do you want your password to contain special characters?")) {
-//     charArray.push(specialChar);
-// }
+while (passwordLength < 8 || passwordLength > 128) {
+    passwordLength = prompt("Invalid password length. Please choose a number between 8 and 128.");
+}
 
-// if (confirm("Do you want your password to contain numeric characters?")) {
-//     charArray.push(numericChar);
-// }
 
-// if (confirm("Do you want your password to contain lower case characters?")) {
-//     charArray.push(lowerCaseAlphabet);
-// }
-
-// if (confirm("Do you want your password to contain upper case characters?")) {
-//     charArray.push(upperCaseAlphabet);
-// }
-
-// if (charArray = []) {
-//     alert("You must choose at least one character set. Please refresh page and start again.")
-// }
-
-// method to confirm user choices using variables
+// ask user which character sets they want included in their password
 
 let specialCharConfirm = confirm("Do you want your password to contain special characters?");
 let numericCharConfirm = confirm("Do you want your password to contain numeric characters?");
@@ -113,6 +98,9 @@ if (lowerCaseConfirm) {
 if (upperCaseConfirm) {
     charArray.push(upperCaseAlphabet);
 }
+
+
+// return an error message if user did not choose at least one character set
 
 if (!specialCharConfirm && !numericCharConfirm && !lowerCaseConfirm && !upperCaseConfirm) {
     alert("You must choose at least one character set. Please refresh page and start again.")
@@ -143,6 +131,18 @@ let addCharacter = (array) => {
 let printPassword = () => {
     let password = newPassword.join('');
     document.getElementById("password").innerHTML = password;
+    document.getElementById("copy").disabled = false;
+}
+
+
+// function that copies password to clipboard
+
+let copyPassword = () => {
+    let copiedText = document.getElementById("password");
+    copiedText.select();
+    copiedText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+
 }
 
 
