@@ -1,0 +1,27 @@
+Initialize arrays for special characters, numeric characters, uppercase alphabet, and lowercase alphabet
+Initialize empty password array
+Initialize password criteria array
+Create function that adds special character, numeric character, uppercase alphabet, and/or lowercase alphabet to password array with single parameter "array"
+Create function that chooses randomly between items in password criteria array
+Create function for pushing random selection to password array
+Prompt user for following information:
+    How long do they want the password?
+    -> Set this as the upper limit condition in the for loop
+    Do they want special characters?
+    -> if true, add special character function to password criteria array
+    Do they want numeric characters?
+    -> if true, add special character function to password criteria array
+    Do they want uppercase alphabet letters?
+    -> if true, add special character function to password criteria array
+    Do they want lowercase alphabet letters?
+    -> if true, add special character function to password criteria array
+In for loop:
+    for (i = 1; i < passwordLength; i++) {
+        initialize variable newaddition from addcharacter function with parameter of randomarray function
+        push function with parameter newaddition
+    }
+Join password array together
+Print it into textarea
+Activate copy button
+
+

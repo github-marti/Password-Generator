@@ -1,3 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eee
+}
+
+.card-body {
+    padding: 50px 30px 10px 30px
+}
+
 textarea {
     height: 300px;
+    border: 2px dashed gray;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+button {
+    width: 33%;
+}
+
+.btn-lg {
+    border-radius: 1.5rem;
+}
+
+#generate {
+    background: rgb(145, 8, 8);
+    color: white;
+}
+
+#copy {
+    background: gray;
+    color: white;
+}
+
+.card-footer {
+    background: white;
 }
