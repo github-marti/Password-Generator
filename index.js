@@ -60,12 +60,12 @@ let upperCaseAlphabet = upperCase.split('');
 // functions for selecting an array from the user's selected character groups
 // and for adding a new character to the password array
 
-let arraySelect = () => {
+function arraySelect() {
     let selectedArray = charArray[Math.floor(Math.random() * charArray.length)];
     return selectedArray;
 }
 
-let addCharacter = (array) => {
+function addCharacter(array) {
     let newChar = array[Math.floor(Math.random() * array.length)];
     newPassword.push(newChar);
 }
@@ -73,7 +73,7 @@ let addCharacter = (array) => {
 
 // function that copies password to clipboard
 
-let copyPassword = () => {
+function copyPassword() {
     let copiedText = document.getElementById("password");
     copiedText.select();
     copiedText.setSelectionRange(0, 99999);
@@ -84,7 +84,7 @@ let copyPassword = () => {
 
 // function creates random password based on user input and then prints it to textarea
 
-let printPassword = () => {
+function printPassword() {
 
     // create empty arrays for accepting user character choices and making the new password
 
