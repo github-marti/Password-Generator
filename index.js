@@ -102,15 +102,14 @@ function printPassword() {
     if (passwordLength < 8 || passwordLength > 128) {
         document.getElementById('length').setAttribute('style', 'border:2px solid red');
         return;
+    } else {
+        document.getElementById('length').setAttribute('style', 'border:1px solid #ced4da');
     }
 
-
-    // ask user which character sets they want included in their password then push them to the array
-
-    let specialCharConfirm = confirm("Do you want your password to contain special characters?");
-    let numericCharConfirm = confirm("Do you want your password to contain numeric characters?");
-    let lowerCaseConfirm = confirm("Do you want your password to contain lower case characters?");
-    let upperCaseConfirm = confirm("Do you want your password to contain upper case characters?");
+    let specialCharConfirm = document.getElementById('special').checked;
+    let numericCharConfirm = document.getElementById('numbers').checked;
+    let lowerCaseConfirm = document.getElementById('lower').checked;
+    let upperCaseConfirm = document.getElementById('upper').checked;
 
     if (specialCharConfirm) {
         charArray.push(specialChar);
