@@ -131,7 +131,10 @@ function printPassword() {
     // return an error message if user did not choose at least one character set
 
     if (!specialCharConfirm && !numericCharConfirm && !lowerCaseConfirm && !upperCaseConfirm) {
-        alert("You must choose at least one character set. Please try again.")
+        document.getElementById('characters').setAttribute('style', 'color:red');
+        return;
+    } else {
+        document.getElementById('characters').setAttribute('style', 'color:black')
     }
 
 
