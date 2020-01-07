@@ -94,13 +94,14 @@ function printPassword() {
 
     // create prompt to ask user for password length and then assign it to a variable
 
-    let passwordLength = prompt("How many characters do you want your password to be? Choose a number between 8 and 128.");
+    let passwordLength = document.getElementById('length').value;
 
 
     // show prompt again if password is not between 8 and 128 characters lomg
 
-    while (passwordLength < 8 || passwordLength > 128) {
-        passwordLength = prompt("Invalid password length. Please choose a number between 8 and 128.");
+    if (passwordLength < 8 || passwordLength > 128) {
+        document.getElementById('length').setAttribute('style', 'border:2px solid red');
+        return;
     }
 
 
