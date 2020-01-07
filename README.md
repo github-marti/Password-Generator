@@ -1,3 +1,5 @@
 # Password-Generator
 
-Click the "Generate Password" button and answer a series of prompts to determine your desired password's length and which characters it contains. Once the password has been generated you can copy it by clicking the "Copy to Clipboard" button.
+Quick and easy password generator! Not the first, but also definitely not the worst.
+
+Set the parameters for your new password and then click the "Generate Password" button. Also features easy copy button for no-hassle password input!
