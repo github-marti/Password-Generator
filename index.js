@@ -101,9 +101,11 @@ function printPassword() {
 
     if (passwordLength < 8 || passwordLength > 128) {
         document.getElementById('length').setAttribute('style', 'border:2px solid red');
+        document.getElementById('length-label').setAttribute('style', 'color:red');
         return;
     } else {
         document.getElementById('length').setAttribute('style', 'border:1px solid #ced4da');
+        document.getElementById('length-label').setAttribute('style', 'color:black');
     }
 
     let specialCharConfirm = document.getElementById('special').checked;
